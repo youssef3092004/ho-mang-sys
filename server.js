@@ -6,12 +6,11 @@ const session = require('express-session');
 
 const doctorRoutes = require("./routes/doctorRoutes");
 const nurseRoutes = require("./routes/nurseRoutes");
-const technicalRoutes = require("./routes/technicalRoutes");
+const technicalRoutes = require("./routes/technicalStaffRoutes");
 const authRoutes = require("./routes/authRoutes");
 const hospitalRoutes = require("./routes/hospitalRoutes");
 
 const cors = require('cors');
-const path = require('path');
 
 const DB_PORT = process.env.DB_PORT || 3000;
 
@@ -31,7 +30,7 @@ app.use(session({
 }));
 app.use(errorHandler);
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://bookify-portfolio.vercel.app'],
+  origin: ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
@@ -52,5 +51,4 @@ console.log('Node.js Version:', process.version);
 
 app.listen(DB_PORT, () => {
   console.log(`Server is listening on port ${DB_PORT}`);
-  console.log('Swagger Docs available at http://localhost:3000/api-docs')
 });

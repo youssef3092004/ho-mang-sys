@@ -2,7 +2,6 @@ const { Router } = require("express");
 const {
   getHospitals,
   getHospital,
-  createHospital,
   updateHospital,
   deleteHospital,
   deleteAllHospitals,
@@ -10,8 +9,6 @@ const {
 const authMiddleware = require("../middleware/authMiddleware");
 
 const router = Router();
-
-router.post("/", authMiddleware, createHospital);
 
 router.get("/", authMiddleware, getHospitals);
 
