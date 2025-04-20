@@ -1,0 +1,46 @@
+{
+  "name": "hospital-staff-system",
+  "version": "1.0.0",
+  "description": "Hospital Staff Management System with authentication and caching",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon ./src/server.js",
+    "start": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youssef3092004/hospital-staff-system.git"
+  },
+  "keywords": [
+    "hospital",
+    "staff",
+    "authentication",
+    "mongoose",
+    "redis",
+    "express"
+  ],
+  "author": "Youssef Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youssef3092004/hospital-staff-system/issues"
+  },
+  "homepage": "https://github.com/youssef3092004/hospital-staff-system#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "morgan": "^1.10.0",
+    "redis": "^4.6.8"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "nodemon": "^3.0.1"
+  }
+}
